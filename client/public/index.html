@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" direction="rtl" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <title>منظومة صحتي الالكترونية</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+
+    <!-- Fonts -->
+    <link
+      href="assets/fonts/Poppins/styles.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/fonts/Tajawal/styles.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Global Stylesheets (Metronic / Bootstrap) -->
+    <link
+      href="assets/plugins/global/plugins.bundle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/style.bundle.rtl.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+
+    <!-- Page Vendor Styles -->
+    <link
+      href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css"
+      href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/plugins/custom/datatables/datatables.bundle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <style>
+      body {
+        font-family: Poppins, Tajawal, Helvetica, sans-serif;
+      }
+
+      #kt_header .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+      }
+
+      #kt_header .header-title {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 22px;
+        font-weight: 600;
+        color: white;
+      }
+
+      @media (max-width: 991px) {
+        #kt_header .header-title {
+          position: static;
+          transform: none;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body
+    id="kt_body"
+    class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled"
+  >
+    <div id="root"></div>
+
+    <!-- نفس سكربتات متروينك (لو حاب تحافظ على الأنيميشن والـ Drawer) -->
+    <script>
+      var hostUrl = "assets/";
+    </script>
+    <script src="assets/plugins/global/plugins.bundle.js"></script>
+    <script src="assets/js/scripts.bundle.js"></script>
+    <script src="assets/js/custom/widgets.js"></script>
+  </body>
+</html>
