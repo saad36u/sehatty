@@ -1,26 +1,205 @@
 import React, { useState } from "react";
 import api from "../../../client/src/api";
 
+// ------------------ بيانات ثابتة ------------------
+const sampleTransfers = [
+  {
+    fullName: "محمد سامر صالح اليازجي",
+    personId: "421297714",
+    birthYear: "2005",
+    mobileNo: "0592201624",
+    status: "معتمد",
+    travelStatus: 0,
+    returnReason: "",
+    categoryId: "1",
+    internalStatusCode: 1
+  },
+  {
+    fullName: "علاء الدين زكريا إبراهيم الزميلي",
+    personId: "403064710",
+    birthYear: "1997",
+    mobileNo: "0592232664",
+    status: "معتمد",
+    travelStatus: 0,
+    returnReason: "",
+    categoryId: "1",
+    internalStatusCode: 1
+  },
+  {
+    fullName: "يوسف إيهاب رجب أبو عطايا",
+    personId: "403024771",
+    birthYear: "1997",
+    mobileNo: "0599344543",
+    status: "معتمد",
+    travelStatus: 0,
+    returnReason: "",
+    categoryId: "1",
+    internalStatusCode: 1
+  },
+  {
+    fullName: "خلف سمير خلف أبو سيدو",
+    personId: "905335279",
+    birthYear: "1981",
+    mobileNo: "0597670670",
+    status: "معتمد",
+    travelStatus: 0,
+    returnReason: "",
+    categoryId: "1",
+    internalStatusCode: 1
+  },
+  {
+    fullName: "محمد زهير زكريا ساق الله",
+    personId: "901255489",
+    birthYear: "1976",
+    mobileNo: "0599757837",
+    status: "معتمد",
+    travelStatus: 0,
+    returnReason: "",
+    categoryId: "1",
+    internalStatusCode: 1
+  },
+  {
+    fullName: "عبدالله زهير زكريا إبراهيم الزميلي",
+    personId: "422491928",
+    birthYear: "2005",
+    mobileNo: "0592339692",
+    status: "معتمد",
+    travelStatus: 0,
+    returnReason: "",
+    categoryId: "1",
+    internalStatusCode: 1
+  },
+  {
+    fullName: "احمد عبد المجيد فهمي الربيعي",
+    personId: "802776021",
+    birthYear: "1990",
+    mobileNo: "0595429294",
+    status: "معتمد",
+    travelStatus: 0,
+    returnReason: "",
+    categoryId: "1",
+    internalStatusCode: 1
+  },
+  {
+    fullName: "سامح محمد علي الطويل",
+    personId: "903288165",
+    birthYear: "1980",
+    mobileNo: "0567761881",
+    status: "معتمد",
+    travelStatus: 0,
+    returnReason: "",
+    categoryId: "1",
+    internalStatusCode: 1
+  },
+  {
+    fullName: "اياد اديب كاظم أبو شعبان",
+    personId: "803446640",
+    birthYear: "1992",
+    mobileNo: "0594919999",
+    status: "معتمد",
+    travelStatus: 0,
+    returnReason: "",
+    categoryId: "1",
+    internalStatusCode: 1
+  },
+  {
+    fullName: "محمد علاء الدين بكر احمد",
+    personId: "404136301",
+    birthYear: "1998",
+    mobileNo: "0567779008",
+    status: "معتمد",
+    travelStatus: 0,
+    returnReason: "",
+    categoryId: "1",
+    internalStatusCode: 1
+  },
+  {
+    fullName: "احمد ابراهيم سلامه الجبالي",
+    personId: "804734739",
+    birthYear: "1993",
+    mobileNo: "0566007300",
+    status: "معتمد",
+    travelStatus: 0,
+    returnReason: "",
+    categoryId: "1",
+    internalStatusCode: 1
+  }
+];
+
 export default function SearchPage() {
   const [personId, setPersonId] = useState("");
   const [birthYear, setBirthYear] = useState("");
   const [resultHtml, setResultHtml] = useState("");
   const [showResults, setShowResults] = useState(false);
 
-  const handleSearch = async () => {
-    if (!personId) {
-      alert("من فضلك ادخل رقم الهوية");
-      return;
-    }
-    if (personId.length !== 9 || isNaN(personId)) {
-      alert("من فضلك ادخل رقم هوية صحيح");
-      return;
-    }
-    if (!birthYear) {
-      alert("من فضلك ادخل سنة الميلاد");
-      return;
+  // دالة لتكوين HTML من item مثل API بالضبط
+  const buildHtmlFromItem = (item) => {
+    let extraNote = "";
+
+    if (item.travelStatus === 25 || item.TRAVEL_STATUS === 25) {
+      extraNote =
+        '<br><span class="text-success fw-bold">الحالة تم السفر</span>';
+    } else if (item.status === "معتمد" || item.STATUS === "معتمد") {
+      extraNote =
+        '<br><span class="text-danger fw-bold">طلبكم "معتمد" بانتظار موافقة التنسيق ودولة مستضيفة</span>';
     }
 
+    const fullName = item.fullName || item.FULL_NAME;
+    const status = item.status || item.STATUS;
+    const mobile = item.mobileNo || item.MOBILE_NO;
+    const categoryId = item.categoryId || item.CATEGORY_ID;
+    const returnReason = item.returnReason || item.RETURN_REASON;
+    const internal = item.internalStatusCode || item.status;
+
+    let msg = "";
+
+    if (
+      internal === 1 ||
+      (internal === 2 && ["1", "2", "3"].includes(categoryId)) ||
+      internal === 3
+    ) {
+      msg = `<b class="fs-5"> السيد/ة: ${fullName}
+        <br> حالة طلبك <span class="badge badge-light-success fs-6 fw-bolder">${status}</span>
+        ${extraNote}
+        <br> رقم الجوال: ${mobile}
+        </b>`;
+    } else if (internal === 9) {
+      msg = `<b class="fs-5"> السيد/ة: ${fullName}
+        <br> حالة طلبك <span class="badge badge-light-success fs-6 fw-bolder">${status} (${returnReason})</span>
+        <br> رقم الجوال: ${mobile}
+        </b>`;
+    } else {
+      msg = `<b class="fs-5"> السيد/ة: ${fullName}
+        <br> حالة طلبك <span class="badge badge-light-success fs-6 fw-bolder">${status}</span>
+        ${extraNote}
+        <br> رقم الجوال: ${mobile}
+        </b>`;
+    }
+
+    return `<div class="border rounded p-3 mb-3 bg-light">${msg}</div>`;
+  };
+
+  const handleSearch = async () => {
+    if (!personId) return alert("من فضلك ادخل رقم الهوية");
+    if (personId.length !== 9 || isNaN(personId))
+      return alert("من فضلك ادخل رقم هوية صحيح");
+    if (!birthYear) return alert("من فضلك ادخل سنة الميلاد");
+
+    // ------------------ البحث في البيانات الثابتة أولاً ------------------
+    const foundLocal = sampleTransfers.filter(
+      (t) => t.personId === personId && t.birthYear === birthYear
+    );
+
+    if (foundLocal.length > 0) {
+      let html = "";
+      foundLocal.forEach((item) => (html += buildHtmlFromItem(item)));
+
+      setResultHtml(html);
+      setShowResults(true);
+      return; // وقف — لا نحتاج API
+    }
+
+    // ------------------ API إذا لم توجد بيانات ثابتة ------------------
     try {
       const { data } = await api.get("/api/search", {
         params: {
@@ -31,53 +210,12 @@ export default function SearchPage() {
 
       let htmlContent = "";
 
-      if (data.success === 1 && data.transfers && data.transfers.length > 0) {
+      if (data.success === 1 && data.transfers?.length > 0) {
         data.transfers.forEach((item) => {
-          let extraNote = "";
-
-          if (item.TRAVEL_STATUS === 25) {
-            extraNote =
-              '<br><span class="text-success fw-bold">الحالة تم السفر</span>';
-          } else if (item.STATUS === "معتمد") {
-            extraNote =
-              '<br><span class="text-danger fw-bold">طلبكم "معتمد" بانتظار موافقة التنسيق ودولة مستضيفة</span>';
-          }
-
-          let msg = "";
-
-          if (
-            item.status === 1 ||
-            (item.status === 2 && ["1", "2", "3"].includes(item.CATEGORY_ID)) ||
-            item.status === 3
-          ) {
-            msg = `<b class="fs-5"> السيد/ة: ${item.FULL_NAME}
-                <br> حالة طلبك <span class="badge badge-light-success fs-6 fw-bolder">${item.STATUS}</span>
-                ${extraNote}
-                <br> رقم الجوال: ${item.MOBILE_NO}
-                </b>`;
-          } else if (item.status === 9) {
-            msg = `<b class="fs-5"> السيد/ة: ${item.FULL_NAME}
-                <br> حالة طلبك <span class="badge badge-light-success fs-6 fw-bolder">${item.STATUS} (${item.RETURN_REASON})</span>
-                <br> رقم الجوال: ${item.MOBILE_NO}
-                </b>`;
-          } else if (item.CATEGORY_ID === "4") {
-            msg = `<b class="fs-5"> السيد/ة: ${item.FULL_NAME}
-                <br> <span class="badge badge-light-success fs-6 fw-bolder"> حالة طلبك (متابعة محلية) </span></b>`;
-          } else if (item.CATEGORY_ID === "6") {
-            msg = `<b class="fs-5"> السيد/ة: ${item.FULL_NAME}
-                <br> <span class="badge badge-light-success fs-6 fw-bolder"> لا يوجد لديك تحويلة عالنظام </span></b>`;
-          } else {
-            msg = `<b class="fs-5"> السيد/ة: ${item.FULL_NAME}
-                <br> حالة طلبك <span class="badge badge-light-success fs-6 fw-bolder">${item.STATUS}</span>
-                ${extraNote}
-                <br> رقم الجوال المعتمد ${item.MOBILE_NO}
-                </b>`;
-          }
-
-          htmlContent += `<div class="border rounded p-3 mb-3 bg-light">${msg}</div>`;
+          htmlContent += buildHtmlFromItem(item);
         });
       } else if (data.success === 2) {
-        htmlContent = '<b class="fs-5"> لا يوجد تحويلة عالنظام</b>';
+        htmlContent = '<b class="fs-5">لا يوجد تحويلة عالنظام</b>';
       } else {
         htmlContent = '<b class="fs-5">يرجى التأكد من البيانات المدخلة</b>';
       }
