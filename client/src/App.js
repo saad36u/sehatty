@@ -30,12 +30,12 @@ function App() {
               <div className="header-title">الخدمات الالكترونية</div>
 
               <div className="d-flex align-items-center gap-3">
-                <Link className="btn btn-light-primary" to="/">
+                {/* <Link className="btn btn-light-primary" to="/">
                   واجهة المواطن
                 </Link>
                 <Link className="btn btn-light-warning" to="/login">
                   لوحة التحكم
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
