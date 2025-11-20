@@ -178,6 +178,17 @@ const sampleTransfers = [
     returnReason: "",
     categoryId: "1",
     internalStatusCode: 1
+  },
+  {
+    fullName: "غالب محمدغالب سليم ابوهلال",
+    personId: "402923080",
+    birthYear: "1996",
+    mobileNo: "0592601111",
+    status: "تحت الاجراء",
+    travelStatus: 0,
+    returnReason: "",
+    categoryId: "1",
+    internalStatusCode: 1
   }
 ];
 
