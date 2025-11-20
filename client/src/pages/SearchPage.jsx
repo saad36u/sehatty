@@ -172,7 +172,7 @@ const sampleTransfers = [
     fullName: "إبراهيم سفيان رضوان الريفي",
     personId: "408479186",
     birthYear: "2003",
-    mobileNo: "0598451315",
+    mobileNo: "0597352661",
     status: "تحت الاجراء",
     travelStatus: 0,
     returnReason: "",
