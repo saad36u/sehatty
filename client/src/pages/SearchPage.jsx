@@ -156,6 +156,28 @@ const sampleTransfers = [
     returnReason: "",
     categoryId: "1",
     internalStatusCode: 1
+  },
+  {
+    fullName: "محمد سليم محمد صرصور",
+    personId: "800584344",
+    birthYear: "1985",
+    mobileNo: "0592500304",
+    status: "معتمد",
+    travelStatus: 0,
+    returnReason: "",
+    categoryId: "1",
+    internalStatusCode: 1
+  },
+  {
+    fullName: "إبراهيم سفيان رضوان الريفي",
+    personId: "408479186",
+    birthYear: "2003",
+    mobileNo: "0598451315",
+    status: "تحت الاجراء",
+    travelStatus: 0,
+    returnReason: "",
+    categoryId: "1",
+    internalStatusCode: 1
   }
 ];
 
