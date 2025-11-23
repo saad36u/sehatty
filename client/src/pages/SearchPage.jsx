@@ -92,8 +92,17 @@ export default function SearchPage() {
     if (foundLocal.length > 0) {
       let html = "";
       foundLocal.forEach((item) => (html += buildHtmlFromItem(item)));
+      const contactHtml = `
+        <div class="mt-4 text-center">
+          <a href="https://wa.me/9727277956" target="_blank" 
+             class="fw-bold text-primary fs-5">
+             للتواصل مع إدارة التحويلات اضغط هنا
+          </a>
+        </div>
+      `;
 
-      setResultHtml(html);
+      setResultHtml(html + contactHtml);
+      
       setShowResults(true);
       return; // وقف — لا نحتاج API
     }
@@ -118,8 +127,17 @@ export default function SearchPage() {
       } else {
         htmlContent = '<b class="fs-5">يرجى التأكد من البيانات المدخلة</b>';
       }
+      const contactHtml = `
+        <div class="mt-4 text-center">
+          <a href="https://wa.me/9727277956" target="_blank" 
+             class="fw-bold text-primary fs-5">
+             للتواصل مع إدارة التحويلات اضغط هنا
+          </a>
+        </div>
+      `;
 
-      setResultHtml(htmlContent);
+      setResultHtml(htmlContent + contactHtml);
+
       setShowResults(true);
     } catch (err) {
       console.error(err);
