@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import api from "../../../client/src/api";
 
-// ------------------ بيانات ثابتة ------------------
+// ------------------ Static Data ------------------
 const sampleTransfers = [
   { fullName: "محمد سامر صالح اليازجي", personId: "421297714", birthYear: "2005", mobileNo: "0592201624", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
   { fullName: "علاء الدين زكريا إبراهيم الزميلي", personId: "403064710", birthYear: "1997", mobileNo: "0592232664", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
