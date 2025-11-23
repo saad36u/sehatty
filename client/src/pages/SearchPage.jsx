@@ -3,194 +3,27 @@ import api from "../../../client/src/api";
 
 // ------------------ بيانات ثابتة ------------------
 const sampleTransfers = [
-  {
-    fullName: "محمد سامر صالح اليازجي",
-    personId: "421297714",
-    birthYear: "2005",
-    mobileNo: "0592201624",
-    status: "معتمد",
-    travelStatus: 0,
-    returnReason: "",
-    categoryId: "1",
-    internalStatusCode: 1
-  },
-  {
-    fullName: "علاء الدين زكريا إبراهيم الزميلي",
-    personId: "403064710",
-    birthYear: "1997",
-    mobileNo: "0592232664",
-    status: "معتمد",
-    travelStatus: 0,
-    returnReason: "",
-    categoryId: "1",
-    internalStatusCode: 1
-  },
-  {
-    fullName: "يوسف إيهاب رجب أبو عطايا",
-    personId: "403024771",
-    birthYear: "1997",
-    mobileNo: "0599344543",
-    status: "معتمد",
-    travelStatus: 0,
-    returnReason: "",
-    categoryId: "1",
-    internalStatusCode: 1
-  },
-  {
-    fullName: "خلف سمير خلف أبو سيدو",
-    personId: "905335279",
-    birthYear: "1981",
-    mobileNo: "0597670670",
-    status: "معتمد",
-    travelStatus: 0,
-    returnReason: "",
-    categoryId: "1",
-    internalStatusCode: 1
-  },
-  {
-    fullName: "محمد زهير زكريا ساق الله",
-    personId: "901255489",
-    birthYear: "1976",
-    mobileNo: "0599757837",
-    status: "معتمد",
-    travelStatus: 0,
-    returnReason: "",
-    categoryId: "1",
-    internalStatusCode: 1
-  },
-  {
-    fullName: "عبدالله زهير زكريا إبراهيم الزميلي",
-    personId: "422491928",
-    birthYear: "2005",
-    mobileNo: "0592339692",
-    status: "معتمد",
-    travelStatus: 0,
-    returnReason: "",
-    categoryId: "1",
-    internalStatusCode: 1
-  },
-  {
-    fullName: "احمد عبد المجيد فهمي الربيعي",
-    personId: "802776021",
-    birthYear: "1990",
-    mobileNo: "0595429294",
-    status: "معتمد",
-    travelStatus: 0,
-    returnReason: "",
-    categoryId: "1",
-    internalStatusCode: 1
-  },
-  {
-    fullName: "سامح محمد علي الطويل",
-    personId: "903288165",
-    birthYear: "1980",
-    mobileNo: "0567761881",
-    status: "معتمد",
-    travelStatus: 0,
-    returnReason: "",
-    categoryId: "1",
-    internalStatusCode: 1
-  },
-  {
-    fullName: "اياد اديب كاظم أبو شعبان",
-    personId: "803446640",
-    birthYear: "1992",
-    mobileNo: "0594919999",
-    status: "معتمد",
-    travelStatus: 0,
-    returnReason: "",
-    categoryId: "1",
-    internalStatusCode: 1
-  },
-  {
-    fullName: "محمد علاء الدين بكر احمد",
-    personId: "404136301",
-    birthYear: "1998",
-    mobileNo: "0567779008",
-    status: "معتمد",
-    travelStatus: 0,
-    returnReason: "",
-    categoryId: "1",
-    internalStatusCode: 1
-  },
-  {
-    fullName: "احمد ابراهيم سلامه الجبالي",
-    personId: "804734739",
-    birthYear: "1993",
-    mobileNo: "0566007300",
-    status: "معتمد",
-    travelStatus: 0,
-    returnReason: "",
-    categoryId: "1",
-    internalStatusCode: 1
-  },
-  {
-    fullName: "تامر اسعد محمد بدوي",
-    personId: "801872748",
-    birthYear: "1990",
-    mobileNo: "0592889202",
-    status: "تحت الاجراء",
-    travelStatus: 0,
-    returnReason: "",
-    categoryId: "1",
-    internalStatusCode: 1
-  },
-  {
-    fullName: "يوسف امين يوسف النزلي",
-    personId: "801344375",
-    birthYear: "1985",
-    mobileNo: "0599832952",
-    status: "معتمد",
-    travelStatus: 0,
-    returnReason: "",
-    categoryId: "1",
-    internalStatusCode: 1
-  },
-  {
-    fullName: "نضال حسن جميل بياعه",
-    personId: "456106434",
-    birthYear: "1983",
-    mobileNo: "0598451315",
-    status: "تحت الاجراء",
-    travelStatus: 0,
-    returnReason: "",
-    categoryId: "1",
-    internalStatusCode: 1
-  },
-  {
-    fullName: "محمد سليم محمد صرصور",
-    personId: "800584344",
-    birthYear: "1985",
-    mobileNo: "0592500304",
-    status: "معتمد",
-    travelStatus: 0,
-    returnReason: "",
-    categoryId: "1",
-    internalStatusCode: 1
-  },
-  {
-    fullName: "إبراهيم سفيان رضوان الريفي",
-    personId: "408479186",
-    birthYear: "2003",
-    mobileNo: "0597352661",
-    status: "تحت الاجراء",
-    travelStatus: 0,
-    returnReason: "",
-    categoryId: "1",
-    internalStatusCode: 1
-  },
-  {
-    fullName: "غالب محمدغالب سليم ابوهلال",
-    personId: "402923080",
-    birthYear: "1996",
-    mobileNo: "0592601111",
-    status: "تحت الاجراء",
-    travelStatus: 0,
-    returnReason: "",
-    categoryId: "1",
-    internalStatusCode: 1
-  }
+  { fullName: "محمد سامر صالح اليازجي", personId: "421297714", birthYear: "2005", mobileNo: "0592201624", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  { fullName: "علاء الدين زكريا إبراهيم الزميلي", personId: "403064710", birthYear: "1997", mobileNo: "0592232664", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  { fullName: "يوسف إيهاب رجب أبو عطايا", personId: "403024771", birthYear: "1997", mobileNo: "0599344543", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  { fullName: "خلف سمير خلف أبو سيدو", personId: "905335279", birthYear: "1981", mobileNo: "0597670670", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  { fullName: "محمد زهير زكريا ساق الله", personId: "901255489", birthYear: "1976", mobileNo: "0599757837", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  { fullName: "عبدالله زهير زكريا إبراهيم الزميلي", personId: "422491928", birthYear: "2005", mobileNo: "0592339692", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  { fullName: "احمد عبد المجيد فهمي الربيعي", personId: "802776021", birthYear: "1990", mobileNo: "0595429294", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  { fullName: "سامح محمد علي الطويل", personId: "903288165", birthYear: "1980", mobileNo: "0567761881", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  { fullName: "اياد اديب كاظم أبو شعبان", personId: "803446640", birthYear: "1992", mobileNo: "0594919999", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  { fullName: "محمد علاء الدين بكر احمد", personId: "404136301", birthYear: "1998", mobileNo: "0567779008", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  { fullName: "احمد ابراهيم سلامه الجبالي", personId: "804734739", birthYear: "1993", mobileNo: "0566007300", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  { fullName: "تامر اسعد محمد بدوي", personId: "801872748", birthYear: "1990", mobileNo: "0566422836", status: "تحت الاجراء", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  { fullName: "يوسف امين يوسف النزلي", personId: "801344375", birthYear: "1985", mobileNo: "0599832952", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  { fullName: "نضال حسن جميل بياعه", personId: "456106434", birthYear: "1983", mobileNo: "0598451315", status: "تحت الاجراء", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  { fullName: "محمد سليم محمد صرصور", personId: "800584344", birthYear: "1985", mobileNo: "0592500304", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  { fullName: "إبراهيم سفيان رضوان الريفي", personId: "408479186", birthYear: "2003", mobileNo: "0597352661", status: "تحت الاجراء", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  { fullName: "غالب محمدغالب سليم ابوهلال", personId: "402923080", birthYear: "1996", mobileNo: "0592601111", status: "تحت الاجراء", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  { fullName: "عمرو سليم خلف ابو سيدو", personId: "802154443", birthYear: "1988", mobileNo: "0597718871", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  { fullName: "ابراهيم محمد محمود ابو حطب", personId: "906726971", birthYear: "1981", mobileNo: "0599908959", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 }
 ];
+
 
 export default function SearchPage() {
   const [personId, setPersonId] = useState("");
