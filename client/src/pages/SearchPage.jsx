@@ -94,9 +94,10 @@ export default function SearchPage() {
       foundLocal.forEach((item) => (html += buildHtmlFromItem(item)));
       const contactHtml = `
         <div class="mt-4 text-center">
-          <a href="https://wa.me/9727277956" target="_blank" 
+        لتواصل مع إدارة التحويلات
+          <a href="https://wa.me/972567277956" target="_blank" 
              class="fw-bold text-primary fs-5">
-             للتواصل مع إدارة التحويلات اضغط هنا
+             اضغط هنا
           </a>
         </div>
       `;
@@ -129,9 +130,10 @@ export default function SearchPage() {
       }
       const contactHtml = `
         <div class="mt-4 text-center">
-          <a href="https://wa.me/9727277956" target="_blank" 
+        لتواصل مع إدارة التحويلات
+          <a href="https://wa.me/972567277956" target="_blank" 
              class="fw-bold text-primary fs-5">
-             للتواصل مع إدارة التحويلات اضغط هنا
+             اضغط هنا
           </a>
         </div>
       `;
