@@ -503,7 +503,7 @@ export default function SearchPage() {
         <div className="col-md-6">
           <div className="card text-center shadow-sm border-0 bg-primary text-white">
             <div className="card-body py-8">
-              <div className="fs-1 fw-bold">22370</div>
+              <div className="fs-1 fw-bold">22710</div>
               <div className="fs-5">اجمالي التحويلات</div>
             </div>
           </div>
