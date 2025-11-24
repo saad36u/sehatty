@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import api from "../../../client/src/api";
 
 // ------------------ Static Data ------------------
+
+
 const sampleTransfers = [
   { fullName: "محمد سامر صالح اليازجي", personId: "421297714", birthYear: "2005", mobileNo: "0592201624", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
   { fullName: "علاء الدين زكريا إبراهيم الزميلي", personId: "403064710", birthYear: "1997", mobileNo: "0592232664", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
@@ -20,9 +22,12 @@ const sampleTransfers = [
   { fullName: "محمد سليم محمد صرصور", personId: "800584344", birthYear: "1985", mobileNo: "0592500304", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
   { fullName: "إبراهيم سفيان رضوان الريفي", personId: "408479186", birthYear: "2003", mobileNo: "0597352661", status: "تحت الاجراء", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
   { fullName: "عمرو سليم خلف ابو سيدو", personId: "802154443", birthYear: "1988", mobileNo: "0597718871", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
-  { fullName: "ابراهيم محمد محمود ابو حطب", personId: "906726971", birthYear: "1981", mobileNo: "0599908959", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 }
-];
+  { fullName: "ابراهيم محمد محمود ابو حطب", personId: "906726971", birthYear: "1981", mobileNo: "0599908959", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
 
+  // الاسماء الجديدة
+  { fullName: "علا بسام عبد المالك ابو رجيله", personId: "402208011", birthYear: "1997", mobileNo: "0592545334", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  { fullName: "محمد موسى سليمان النجار", personId: "801590100", birthYear: "1986", mobileNo: "0598687286", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 }
+];
 
 export default function SearchPage() {
   const [personId, setPersonId] = useState("");
