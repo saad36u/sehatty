@@ -23,10 +23,6 @@ const sampleTransfers = [
   { fullName: "إبراهيم سفيان رضوان الريفي", personId: "408479186", birthYear: "2003", mobileNo: "0597352661", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
   { fullName: "عمرو سليم خلف ابو سيدو", personId: "802154443", birthYear: "1988", mobileNo: "0597718871", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
   { fullName: "ابراهيم محمد محمود ابو حطب", personId: "906726971", birthYear: "1981", mobileNo: "0599908959", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
-
-  // الاسماء الجديدة
-  { fullName: "علا بسام عبد المالك ابو رجيله", personId: "402208011", birthYear: "1997", mobileNo: "0592545334", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
-  { fullName: "محمد موسى سليمان النجار", personId: "801590100", birthYear: "1986", mobileNo: "0598687286", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 }
 ];
 
 export default function SearchPage() {
