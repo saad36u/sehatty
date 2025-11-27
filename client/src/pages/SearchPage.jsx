@@ -3,7 +3,6 @@ import api from "../../../client/src/api";
 
 // ------------------ Static Data ------------------
 
-
 const sampleTransfers = [
   { fullName: "محمد سامر صالح اليازجي", personId: "421297714", birthYear: "2005", mobileNo: "0592201624", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
   { fullName: "علاء الدين زكريا إبراهيم الزميلي", personId: "403064710", birthYear: "1997", mobileNo: "0592232664", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
@@ -22,7 +21,11 @@ const sampleTransfers = [
   { fullName: "إبراهيم سفيان رضوان الريفي", personId: "408479186", birthYear: "2003", mobileNo: "0597352661", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
   { fullName: "عمرو سليم خلف ابو سيدو", personId: "802154443", birthYear: "1988", mobileNo: "0597718871", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
   { fullName: "ابراهيم محمد محمود ابو حطب", personId: "906726971", birthYear: "1981", mobileNo: "0599908959", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+
+  // تامر أسعد محمد بدوي - جديد
+  { fullName: "تامر أسعد محمد بدوي", personId: "801872748", birthYear: "1990", mobileNo: "0567277956", status: "تحت الإجراء", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 0 },
 ];
+
 
 export default function SearchPage() {
   const [personId, setPersonId] = useState("");
