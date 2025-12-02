@@ -21,10 +21,14 @@ const sampleTransfers = [
   { fullName: "إبراهيم سفيان رضوان الريفي", personId: "408479186", birthYear: "2003", mobileNo: "0597352661", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
   { fullName: "عمرو سليم خلف ابو سيدو", personId: "802154443", birthYear: "1988", mobileNo: "0597718871", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
   { fullName: "ابراهيم محمد محمود ابو حطب", personId: "906726971", birthYear: "1981", mobileNo: "0599908959", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
-
-  // تامر أسعد محمد بدوي - جديد
   { fullName: "تامر أسعد محمد بدوي", personId: "801872748", birthYear: "1990", mobileNo: "0567277956", status: "تحت الإجراء", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 0 },
+  { fullName: "علي أنور محمد أبو هزاع", personId: "424701902", birthYear: "2007", mobileNo: "0599758595", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  { fullName: "داليا تيسير بسيم فجو", personId: "434758264", birthYear: "2014", mobileNo: "0598260460", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  { fullName: "احمد يوسف جبر الحناوي", personId: "802204214", birthYear: "1989", mobileNo: "0599265375", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  { fullName: "اياد نضال حسين النجار", personId: "424403657", birthYear: "2006", mobileNo: "0567633406", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+
 ];
+
 
 
 export default function SearchPage() {
