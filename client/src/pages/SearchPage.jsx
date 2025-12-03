@@ -26,6 +26,9 @@ const sampleTransfers = [
   {fullName: "دالية تيسير بيسم فوجو", personId: "434758264", birthYear: "2014", mobileNo: "0598260460", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
   { fullName: "احمد يوسف جبر الحناوي", personId: "802204214", birthYear: "1989", mobileNo: "0599265375", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
   { fullName: "اياد نضال حسين النجار", personId: "424403657", birthYear: "2006", mobileNo: "0567633406", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  {fullName: "يزن ميسره خليل الصباغ", personId: "432235265", birthYear: "2012", mobileNo: "0599708996", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+
+
 
 ];
 
