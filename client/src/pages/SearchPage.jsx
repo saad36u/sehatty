@@ -24,6 +24,7 @@ const sampleTransfers = [
   { fullName: "تامر أسعد محمد بدوي", personId: "801872748", birthYear: "1990", mobileNo: "0567277956", status: "تحت الإجراء", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 0 },
   {fullName: "يزن ميسره خليل الصباغ", personId: "432235265", birthYear: "2012", mobileNo: "0599708996", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
   {fullName: "عبد المجيد باسل ياسين قفه", personId: "803650969", birthYear: "1992", mobileNo: "0595099056", status: "تحت الإجراء", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+  {fullName: "باسل ياسين يوسف قفه", personId: "971555446", birthYear: "1960", mobileNo: "0594420318", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
 
 
 
