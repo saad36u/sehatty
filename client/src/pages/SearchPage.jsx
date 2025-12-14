@@ -26,8 +26,8 @@ const sampleTransfers = [
   {fullName: "عبد المجيد باسل ياسين قفه", personId: "803650969", birthYear: "1992", mobileNo: "0595099056", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
   {fullName: "باسل ياسين يوسف قفه", personId: "971555446", birthYear: "1960", mobileNo: "0594420318", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
 // الاسماء الجديدة
-{ fullName: "كرم باسل باسين قفه", personId: "804331841", birthYear: "1993", mobileNo: "0595606441", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
-{ fullName: "محمد مخلص نمر عبد المجيد ابو ناجي", personId: "802552760", birthYear: "1991", mobileNo: "0599631742", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+{ fullName: "كرم باسل باسين قفه", personId: "804331841", birthYear: "1993", mobileNo: "0595606441", status: "تحت الإجراء", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+{ fullName: "محمد مخلص نمر عبد المجيد ابو ناجي", personId: "802552760", birthYear: "1991", mobileNo: "0599631742", status: "تحت الإجراء", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
 { fullName: "وفاء مدحت ديب شنغان", personId: "401214150", birthYear: "1996", mobileNo: "0592680298", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 }
 
 
