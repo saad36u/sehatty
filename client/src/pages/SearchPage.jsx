@@ -14,7 +14,6 @@ const sampleTransfers = [
   { fullName: "سامح محمد علي الطويل", personId: "903288165", birthYear: "1980", mobileNo: "0567761881", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
   { fullName: "اياد اديب كاظم أبو شعبان", personId: "803446640", birthYear: "1992", mobileNo: "0594919999", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
   { fullName: "محمد علاء الدين بكر احمد", personId: "404136301", birthYear: "1998", mobileNo: "0567779008", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
-  { fullName: "احمد ابراهيم سلامه الجبالي", personId: "804734739", birthYear: "1993", mobileNo: "0566007300", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
   { fullName: "يوسف امين يوسف النزلي", personId: "801344375", birthYear: "1985", mobileNo: "0599832952", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
   { fullName: "نضال حسن جميل بياعه", personId: "456106434", birthYear: "1983", mobileNo: "0598451315", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
   { fullName: "محمد سليم محمد صرصور", personId: "800584344", birthYear: "1985", mobileNo: "0592500304", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
