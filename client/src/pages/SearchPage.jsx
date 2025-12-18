@@ -28,7 +28,7 @@ const sampleTransfers = [
 { fullName: "كرم باسل باسين قفه", personId: "804331841", birthYear: "1993", mobileNo: "0595606441", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
 { fullName: "محمد مخلص نمر عبد المجيد ابو ناجي", personId: "802552760", birthYear: "1991", mobileNo: "0599631742", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
 { fullName: "وفاء مدحت ديب شنغان", personId: "401214150", birthYear: "1996", mobileNo: "0592680298", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 }
-  {fullName: "يوسف عبدالله بركه ابو دقه", personId: "456604420", birthYear: "1945", mobileNo: "0569469462", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
+{ fullName: "يوسف عبدالله بركه ابو دقه", personId: "456604420", birthYear: "1945", mobileNo: "0569469462", status: "معتمد", travelStatus: 0, returnReason: "", categoryId: "1", internalStatusCode: 1 },
 
 
 ];
